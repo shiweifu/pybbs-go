@@ -59,9 +59,9 @@ UNLOCK TABLES;
 LOCK TABLES `reply` WRITE;
 /*!40000 ALTER TABLE `reply` DISABLE KEYS */;
 
-INSERT INTO `reply` (`id`, `topic_id`, `content`, `user_id`, `up`, `in_time`)
+INSERT INTO `reply` (`id`, `topic_id`, `content`, `html_content`, `user_id`, `up`, `in_time`)
 VALUES
-	(1,1,'分享世界',1,0,'2016-08-26 09:22:52');
+	(1,1,'# 分享世界', '<h1>分享世界</h1>',1,0,'2016-08-26 09:22:52');
 
 /*!40000 ALTER TABLE `reply` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -147,9 +147,9 @@ UNLOCK TABLES;
 LOCK TABLES `topic` WRITE;
 /*!40000 ALTER TABLE `topic` DISABLE KEYS */;
 
-INSERT INTO `topic` (`id`, `title`, `content`, `in_time`, `user_id`, `section_id`, `view`, `reply_count`, `last_reply_user_id`, `last_reply_time`)
+INSERT INTO `topic` (`id`, `title`, `content`, `html_content`, `in_time`, `user_id`, `section_id`, `view`, `reply_count`, `last_reply_user_id`, `last_reply_time`)
 VALUES
-	(1,'测试话题 ，hello world','你好，世界','2016-08-26 09:22:42',1,1,15,1,NULL,'2016-08-26 09:22:42');
+	(1,'测试话题 ，hello world','# 你好，世界', '<h1>你好，世界</h1>', '2016-08-26 09:22:42',1,1,15,1,NULL,'2016-08-26 09:22:42');
 
 /*!40000 ALTER TABLE `topic` ENABLE KEYS */;
 UNLOCK TABLES;
